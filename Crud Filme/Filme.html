@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Filme</title>
+</head>
+
+<body>
+
+<h1>Cadastro de Filme</h1>
+
+<label for="inputid">id</label>
+<input type="number" name="inputid" id="inputid">
+<input type="button" value="Procure" id="btProcure" onclick="procure()" style="display:inline;">
+<input type="button" value="Inserir" id="btInserir" onclick="inserir()" style="display:none;">
+<input type="button" value="Alterar" id="btAlterar" onclick="alterar()" style="display:none;">
+<input type="button" value="Excluir" id="btExcluir" onclick="excluir()" style="display:none;">
+<br><br>
+
+<label for="inputtitulo">titulo</label>
+<input type="text" name="inputtitulo" id="inputtitulo"><br>
+<label for="inputdiretor">diretor</label>
+<input type="text" name="inputdiretor" id="inputdiretor"><br>
+<label for="inputdatalançamento">data lançamento</label>
+<input type="date" name="inputdatalançamento" id="inputdatalançamento" ><br>
+<label for="inputavaliacao">avaliação</label>
+<input type="number" name="inputavaliacao" id="inputavaliacao" min="0" max="10"><br>
+<div id="divAviso" style="background-color: antiquewhite;"></div>
+<br>
+<input type="button" value="Salvar" id="btSalvar" onclick="salvar()" style="display:none;">
+<input type="button" value="Cancelar" id="btCancelar" onclick="cancelarOperacao()" style="display:none;">
+<br><br>
+<div id="outputSaida" style="background-color: aqua;">...</div>
+
+<input type="button" value="Persistir" id="btPersisitir" onclick="prepararESalvarCSV()">
+<input type="button" value="Recuperar" id="btRecuperar" onclick="abrirArquivoSalvoEmLocalPermanente()">
+<h1> Filtrar por avaliação</h1><br>
+<input type="button" value="Filtrar" onclick="FiltroAvaliaçao()"><br>
+<div id="outputSaida2" style="background-color: rgb(209, 43, 21);">...</div>
+
+<script src="./Filme.js"></script>
+<script src="./FilmeControl.js"></script>
+
+</body>
+
+</html>
